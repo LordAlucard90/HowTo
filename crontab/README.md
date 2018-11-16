@@ -1,25 +1,32 @@
 # Crontab
 
-## Edit user crontabs
+## Show cron jobs
 ```bash
-$ crontab -e      # current user
-$ sudo crontab -e # super user
+$ crontab -l          # current user
+$ crontab -u user -l  # specific user
+$ sudo crontab -l     # super user
 ```
 
-## Show crontabs
+## Edit user cron jobs
 ```bash
-$ crontab -l      # current user
-$ sudo crontab -l # super user
+$ crontab -e          # current user
+$ crontab -u user -e  # specific user
+$ sudo crontab -e     # super user
 ```
 
-## Scheduling crontabs
+## Delete all user cron jobs
+```bash
+$ crontab -r          # current user
+$ crontab -u user -r  # specific user
+$ sudo crontab -r     # super user
+```
 
-### Sintax
-`
-<minute> <hour> <day of month> <month> <day of week> <command>
-`
+### Schedule cron jobs
 
-#### Where:
+#### Sintax
+`<minute> <hour> <day of month> <month> <day of week> <command>`
+
+##### Where:
 - `<minute> <hour> <day of month> <month> <day of week>` could be:
 
   - `*` means every value of that type.
@@ -39,11 +46,68 @@ $ sudo crontab -l # super user
   is a bash inline command.
 
 
-### Configuration examples
+#### Configuration examples
 - **Every Minute**
 
-  ```* * * * * command```
+  ```* * * * * <command>```
 
-- **Every 5 Minute**
+- **Every 5 Minutes**
 
-  ```*/5 * * * * command```
+  ```*/5 * * * * <command>```
+
+- **Every Hour**
+
+  ```0 * * * * <command>```
+
+- **Every Hour at Minute 15**
+
+  ```15 * * * * <command>```
+
+- **Every 2 Hours**
+
+  ```* */2 * * * <command>```
+
+- **Every Day**
+
+  ```0 0 * * * <command>```
+
+- **Every Day at 3am**
+
+  ```0 3 * * * <command>```
+
+- **Every Sunday**
+
+  ```0 0 * * 0 <command>``` or ```0 0 * * SUN <command>```
+
+- **Every Working Day**
+
+  ```0 0 * * 1-5 <command>```
+
+- **Every Month**
+
+  ```0 0 1 * * <command>```
+
+- **Every First Day of Month at 15:30**
+
+  ```30 15 1 * * <command>```
+
+- **Every 6 Months**
+
+  ```0 0 1 */6 * <command>```
+
+- **Every Year**
+
+  ```0 0 1 1 * <command>```
+
+## Shortcuts
+
+### Sintax
+`<shortcut> <command>`
+
+#### Shortcuts' List:
+- **@rebot** run once at startup
+- **@yearly** run once a year
+- **@monthly** run once a month
+- **@weekly** run once a week
+- **@daily** run once a day
+- **@hourly** run once an hour
