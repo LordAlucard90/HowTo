@@ -30,7 +30,7 @@ $ ffpeg -i <input> <output>
 - `libfdk_aac` AAC
 - [others]
 
-### Select Video Codecs
+### Select Subtitle Codecs
 `-scodec <codec>` or `-c:s <codec>`
 
 **Codecs**
