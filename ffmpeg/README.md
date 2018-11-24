@@ -39,12 +39,8 @@ $ ffpeg -i <input> <output>
 - `srt`
 - [others]
 
-
-
-
-
-
-
-
 ### Multiprocessing
 `-threads <n-threads>`
+
+### Resize Video or Image
+`-vf scale=<wight>:<height>`
