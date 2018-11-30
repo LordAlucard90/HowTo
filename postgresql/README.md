@@ -33,3 +33,7 @@ $ sudo -u postgres createdb <database>
 - `CREATE DATABASE <database>;` create database <database>
 - `CREATE USER <user> WITH PASSWORD '<password>';` create <user> with <password>
 - `GRANT ALL PRIVILEGES ON DATABASE <database> TO <user>;` grant privileges to <user> on <database>
+
+## Useful Tools
+
+- **pgadmin3** - graphical manager 
