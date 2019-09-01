@@ -1,5 +1,14 @@
 # Crontab
 
+## Contents
+
+- [Show cron jobs](#show_cron_jobs)
+- [Edit user cron jobs](#edit_user_cron_jobs)
+- [Delete all user cron jobs](#Delete_all_user_cron_jobs)
+- [Schedule cron jobs](#schedule_cron_jobs)
+- [Configuration examples](#configuration_examples)
+- [Shortcuts](#shortcuts)
+
 ## Show cron jobs
 ```bash
 $ crontab -l          # current user
@@ -21,7 +30,7 @@ $ crontab -u user -r  # specific user
 $ sudo crontab -r     # super user
 ```
 
-### Schedule cron jobs
+## Schedule cron jobs
 
 #### Sintax
 `<minute> <hour> <day of month> <month> <day of week> <command>`
@@ -46,7 +55,7 @@ $ sudo crontab -r     # super user
   is a bash inline command.
 
 
-#### Configuration examples
+## Configuration examples
 - **Every Minute**
 
   ```* * * * * <command>```
@@ -101,7 +110,7 @@ $ sudo crontab -r     # super user
 
 ## Shortcuts
 
-### Sintax
+#### Sintax
 `<shortcut> <command>`
 
 #### Shortcuts' List:
