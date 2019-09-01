@@ -4,14 +4,14 @@
 
 - [Installation](#installation)
 - [Management](#management)
-- [User Dir](#user_dir)
-- [URL Rewrite](#uer_rewrite)
-- [Use PHP5](#use_php5)
+- [User Dir](#user-dir)
+- [URL Rewrite](#uer-rewrite)
+- [Use PHP5](#use-php5)
 
 ## Installation
 
 ```bash
-$ sudo apt install -y apache2
+sudo apt install -y apache2
 ```
 
 ---
@@ -21,21 +21,21 @@ $ sudo apt install -y apache2
 #### restart, stop, start
 
 ```bash
-$ sudo apache2ctl [restart|stop|start]
+sudo apache2ctl [restart|stop|start]
 # or
-$ sudo systemctl [restart|stop|start] apache2
+sudo systemctl [restart|stop|start] apache2
 ```
 #### mod, site, conf
 ```bash
 # mpd
-$ sudo a2enmod <mod>
-$ sudo a2dismod <mod>
+sudo a2enmod <mod>
+sudo a2dismod <mod>
 # site
-$ sudo a2ensite <site>
-$ sudo a2dissite <site>
+sudo a2ensite <site>
+sudo a2dissite <site>
 # conf
-$ sudo a2enconf <conf>
-$ sudo a2disconf <conf>
+sudo a2enconf <conf>
+sudo a2disconf <conf>
 ```
 ---
 

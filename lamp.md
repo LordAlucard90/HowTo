@@ -14,8 +14,8 @@
 
 Update the packages:
 ```bash
-$ sudo apt update
-$ sudo apt upgrade
+sudo apt update
+sudo apt upgrade
 ```
 ---
 
@@ -24,17 +24,17 @@ $ sudo apt upgrade
 Install Apache 2
 
 ```bash
-$ sudo apt install -y apache2
+sudo apt install -y apache2
 ```
 Check web traffic:
 ```bash
-$ sudo ufw app list
+sudo ufw app list
 # Available applications:
 #   Apache
 #   Apache Full
 #   Apache Secure
 #   ...
-$ sudo ufw app info "Apache Full"
+sudo ufw app info "Apache Full"
 # Profile: Apache Full
 # Title: Web Server (HTTP,HTTPS)
 # Description: Apache v2 is the next generation of the omnipresent Apache web
@@ -47,7 +47,7 @@ $ sudo ufw app info "Apache Full"
 If the responses are different enable `Apache Full`:
 
 ```bash
-$ sudo ufw allow in "Apache Full"
+sudo ufw allow in "Apache Full"
 ```
 
 The default Apache2 web page is available at:
@@ -60,13 +60,13 @@ http://127.0.0.1/ or http://localhost/
 Install MySQL:
 
 ```bash
-$ sudo apt install -y mysql-server
+sudo apt install -y mysql-server
 ```
 
 Launch the `mysql_secure_installation` script:
 
 ```bash
-$ sudo mysql_secure_installation
+sudo mysql_secure_installation
 ```
 - **VALIDATE PASSWORD PLUGIN** -> **Y**
   - `0 => LOW`: length >= 8
@@ -81,7 +81,7 @@ $ sudo mysql_secure_installation
 Change root password from MySQL shell:
 
 ```bash
-$ sudo mysql
+sudo mysql
 mysql> SELECT user, authentication_string, plugin, host from mysql.user;
 # root has not authentication_string
 ALTER USER `root`@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
@@ -92,9 +92,9 @@ mysql> quit
 ```
 Now, generally after reboot, you can log into mysql with:
 ```bash
-$ sudo mysql -p
+sudo mysql -p
 # or
-$ mysql -u root -p
+mysql -u root -p
 ```
 ---
 ## PHP
@@ -102,8 +102,8 @@ $ mysql -u root -p
 Install PHP and its plugins:
 
 ```bash
-$ sudo apt install -y php libapache2-mod-php php-mysql
-$ sudo apache2ctl restart
+sudo apt install -y php libapache2-mod-php php-mysql
+sudo apache2ctl restart
 ```
 
 #### Check is it works

@@ -2,32 +2,32 @@
 
 ## Contents
 
-- [Show cron jobs](#show_cron_jobs)
-- [Edit user cron jobs](#edit_user_cron_jobs)
-- [Delete all user cron jobs](#Delete_all_user_cron_jobs)
-- [Schedule cron jobs](#schedule_cron_jobs)
-- [Configuration examples](#configuration_examples)
+- [Show cron jobs](#show-cron-jobs)
+- [Edit user cron jobs](#edit-user-cron-jobs)
+- [Delete all user cron jobs](#Delete-all-user-cron-jobs)
+- [Schedule cron jobs](#schedule-cron-jobs)
+- [Configuration examples](#configuration-examples)
 - [Shortcuts](#shortcuts)
 
 ## Show cron jobs
 ```bash
-$ crontab -l          # current user
-$ crontab -u user -l  # specific user
-$ sudo crontab -l     # super user
+crontab -l          # current user
+crontab -u user -l  # specific user
+sudo crontab -l     # super user
 ```
 
 ## Edit user cron jobs
 ```bash
-$ crontab -e          # current user
-$ crontab -u user -e  # specific user
-$ sudo crontab -e     # super user
+crontab -e          # current user
+crontab -u user -e  # specific user
+sudo crontab -e     # super user
 ```
 
 ## Delete all user cron jobs
 ```bash
-$ crontab -r          # current user
-$ crontab -u user -r  # specific user
-$ sudo crontab -r     # super user
+crontab -r          # current user
+crontab -u user -r  # specific user
+sudo crontab -r     # super user
 ```
 
 ## Schedule cron jobs
@@ -46,7 +46,7 @@ $ sudo crontab -r     # super user
 
   - `<n1>-<n2>,<n3>-<n4>` means every value from n1-th to n2-th and every value from n2-th to n3-th.
 
-  - `<n1>-<n2>/<step>` means the n1-th, the (n1+step)-th, the (n1+2*step)-th and so on until (n1+k*step) <= n2.
+  - `<n1>-<n2-/<step>` means the n1-th, the (n1+step)-th, the (n1+2*step)-th and so on until (n1+k*step) <= n2.
 
   - `*/<step>` is like `<n1>-<n2>/<step>` in the range of all values of that type.
 

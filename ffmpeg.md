@@ -2,12 +2,12 @@
 
 ## Contents
 
-- [Convert a Video](#convert_a-video)
+- [Convert a Video](#convert-a-video)
 - [mkvmerge](#mkvmerge)
 
 ## Convert a Video
 ```
-$ ffpeg -i <input> <output>
+ffpeg -i <input> <output>
 ```
 
 **Input or Output could be:**
