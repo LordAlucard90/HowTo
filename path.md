@@ -10,7 +10,7 @@ export PATH=$PATH:<ABSOLUTE_PATH_TO_ADD>
 
 For a permanent insertion add to the last row of `.bashrc`:
 
-````bash
+```bash
 export PATH=$PATH:<ABSOLUTE_PATH_TO_ADD>
 ```
 
